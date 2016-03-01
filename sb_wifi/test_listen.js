@@ -1,7 +1,7 @@
 
 var SB= require("spacebrew");
 
-var sb_host = "192.168.1.117";
+var sb_host = "192.168.1.57";
 
 var name ="CCT_in";
 
