@@ -1,7 +1,7 @@
 
 var SB= require("spacebrew");
 
-var sb_host = "sandbox.spacebrew.cc";
+var sb_host = "192.168.1.57";
 
 var name ="CCT";
 
@@ -18,5 +18,5 @@ setInterval(function(){
     
     sb.send("tick", "string", "listen up!" + i);
     i++;
-    console.log('sent');
+    console.log('sent ' + i);
 }, 1000);
