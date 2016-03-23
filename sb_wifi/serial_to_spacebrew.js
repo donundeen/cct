@@ -31,7 +31,7 @@ var serialPort = new SerialPort(portname, {
 });
 
 var sb_host = "192.168.1.57";
-var name ="CCT"+ip_address;
+var name ="CCT"+ip_address.toString();
 var description = "iteractive tech";
 var sb  = new SB.Client(sb_host, name, description);
 sb.addPublish("tick", "range", "tick tock");
