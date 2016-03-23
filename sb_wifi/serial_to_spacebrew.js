@@ -3,6 +3,9 @@ var SB = require("spacebrew");
 var fs = require("fs");
 //comments
 
+var ip = require("ip");
+var ip_address = ip.address() ;
+
 
 var files = fs.readdirSync("/dev/serial/by-id");
 var portname = false;
@@ -26,7 +29,7 @@ var serialPort = new SerialPort(portname, {
 });
 
 var sb_host = "192.168.1.57";
-var name ="CCT";
+var name ="CCT"+ip_address;
 var description = "iteractive tech";
 var sb  = new SB.Client(sb_host, name, description);
 sb.addPublish("tick", "string", "tick tock");
