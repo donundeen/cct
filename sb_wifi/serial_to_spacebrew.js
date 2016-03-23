@@ -1,5 +1,5 @@
 var Serial = require("serialport");
-var spacebrew = require("spacebrew");
+var SB = require("spacebrew");
 var fs = require("fs");
 //comments
 
