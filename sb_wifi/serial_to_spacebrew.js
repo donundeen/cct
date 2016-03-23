@@ -5,6 +5,8 @@ var fs = require("fs");
 
 var ip = require("ip");
 var ip_address = ip.address() ;
+console.log("ip is");
+console.log(ip_address);
 
 
 var files = fs.readdirSync("/dev/serial/by-id");
