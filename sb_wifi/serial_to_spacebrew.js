@@ -34,7 +34,7 @@ var sb_host = "192.168.1.57";
 var name ="CCT"+ip_address;
 var description = "iteractive tech";
 var sb  = new SB.Client(sb_host, name, description);
-sb.addPublish("tick", "string", "tick tock");
+sb.addPublish("tick", "range", "tick tock");
 sb.connect();
 
 
@@ -43,7 +43,7 @@ serialPort.on("open", function () {
   serialPort.on('data', function(data) {
   	data = data.toString().trim();
     console.log(data);
-    sb.send("tick", "string", data);      
+    sb.send("tick", "range", data);      
   });  
 });
 
